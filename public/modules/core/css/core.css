@@ -18,3 +18,16 @@ body.ng-cloak
 {
 	display: block;
 }
+.jumbotron{
+	padding: 10px;
+	text-align: left;
+	margin-top: 20px;
+}
+.home-cars img{
+	width: 100% !important;
+	border: 1px #ccc solid;
+	padding: 5px;
+}
+.car{
+	margin-bottom: 20px;
+}
