@@ -1,4 +1,4 @@
-<section data-ng-controller="HomeController">
+<section data-ng-controller="CarsController" data-ng-init="find()">
 	<div class="jumbotron text-center">
 		<div class="row">
 			<div class="col-md-6">
@@ -95,31 +95,14 @@
 	</div>
 
 	<div class="row home-cars">
-	<h2>Latest cars</h3>
-		<div class="col-md-3">
-			<h3>2015 Toyota Camry</h3>
+	<h2>Latest cars</h2>
+		<div class="col-md-3" ng-repeat="car in cars">
+			<h3>{{car.title}}</h3>
 			<img src="http://bestcarmag.com/sites/default/files/6174081toyota-camry-6.jpg">
 			<br><br>
-			<a class="btn btn-primary" href="#">View details</a>
+			<a class="btn btn-primary" href="/#!/cars/{{car._id}}">View details</a>
 		</div>
-		<div class="col-md-3">
-			<h3>2015 Toyota Corolla</h3>
-			<img src="http://www3.toyota.com.au/corolla/~/media/toyota/vehicles/corolla/images/accessories-360/vehicles/hatch-ascent/silver-pearl/033.png?w=800&hash=FBD72447ED55F9854A607CE5DF76EBCE051AE9B6">
-			<br><br>
-			<a class="btn btn-primary" href="#">View details</a>
-		</div>
-		<div class="col-md-3">
-			<h3>2015 Toyota Avalon</h3>
-			<img src="https://upload.wikimedia.org/wikipedia/commons/4/45/2014_Toyota_Avalon_XLE,_rear.jpg">
-			<br><br>
-			<a class="btn btn-primary" href="#">View details</a>
-		</div>
-		<div class="col-md-3">
-			<h3>2015 Toyota Tundra</h3>
-			<img src="http://buyersguide.caranddriver.com/media/assets/submodel/7356.jpg">
-			<br><br>
-			<a class="btn btn-primary" href="#">View details</a>
-		</div>
+		
 	</div>
 
 </section>
