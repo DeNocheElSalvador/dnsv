@@ -3,46 +3,19 @@
 		<h1>Latest Cars</h1>
 	</div>
 	
-<div class="row car">
+<div class="row car" ng-repeat="car in cars">
 	<div class="col-md-3">
 		<img class="img-thumbnail" src="http://bestcarmag.com/sites/default/files/6174081toyota-camry-6.jpg">
 	</div>
 	<div class="col-md-9">
-		<h3>Sample Listing One</h3>
+		<h3>{{car.title}}</h3>
 		<ul>
-			<li>Make: Toyota</li>
-			<li>Model: 2013 Camry</li>
-			<li>Price: $12,900.00</li>
+			<li>{{car.make}}</li>
+			<li>{{car.year}} {{car.model}}</li>
+			<li>{{car.price | currency}}</li>
 		</ul>
-		<a href="/#!/cars/1">View details</a>
+		<a href="/#!/cars/{{car._id}}">View details</a>
 	</div>
 </div>
-<div class="row car">
-	<div class="col-md-3">
-		<img class="img-thumbnail" src="http://www3.toyota.com.au/corolla/~/media/toyota/vehicles/corolla/images/accessories-360/vehicles/hatch-ascent/silver-pearl/033.png?w=800&hash=FBD72447ED55F9854A607CE5DF76EBCE051AE9B6">
-	</div>
-	<div class="col-md-9">
-		<h3>Sample Listing Two</h3>
-		<ul>
-			<li>Make: Toyota</li>
-			<li>Model: 2015 Corolla</li>
-			<li>Price: $15,900.00</li>
-		</ul>
-		<a href="/#!/cars/1">View details</a>
-	</div>
-</div>
-<div class="row car">
-	<div class="col-md-3">
-		<img class="img-thumbnail" src="http://buyersguide.caranddriver.com/media/assets/submodel/7356.jpg">
-	</div>
-	<div class="col-md-9">
-		<h3>Sample Listing Three</h3>
-		<ul>
-			<li>Make: Toyota</li>
-			<li>Model: 2016 Tundra</li>
-			<li>Price: $40,000.00</li>
-		</ul>
-		<a href="/#!/cars/1">View details</a>
-	</div>
-</div>
+
 </section>
